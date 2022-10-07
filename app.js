@@ -1,42 +1,58 @@
 function fillFunction() {
-    let companyName = document.getElementById('company_name').value;
-    let companyEmail = document.getElementById('mail_address').value;
-    let companyTel = document.getElementById('tel').value;
-    let companyAddress =  document.getElementById('address').value;
+    let yourName = document.getElementById('your_name').value;
+    let companyPosition = document.getElementById('position').value;
+    let idNumber = document.getElementById('idNum').value;
+    let yourMotto =  document.getElementById('your_motto').value;
 
 /* Funkcja for poniżej iteruję przez tabele klasy zmieniająć wszystkie jej elementy
-o tej samej klasie na tekst wpisany w formularzu. 
-Można wpisać wszyskie elementy po kolei np:
-    document.getElementsByClassName('comp_header')[0].innerHTML = companyName;
-    document.getElementsByClassName('comp_header')[1].innerHTML = companyName;
-    document.getElementsByClassName('comp_header')[2].innerHTML = companyName; */
+o tej samej klasie na tekst wpisany w formularzu, o ile nie jest pusty, wtedy wyświetla
+alert. Można wpisać wszyskie elementy po kolei np:
+    -document.getElementsByClassName('comp_header')[0].innerHTML = companyName;
+    -document.getElementsByClassName('comp_header')[1].innerHTML = companyName;
+    -document.getElementsByClassName('comp_header')[2].innerHTML = companyName; */
 
-    let headL = document.getElementsByClassName('comp_header').length;
-    let head = document.getElementsByClassName('comp_header');
-    for (let a = 0; a < headL; a++) {
-        head[a].innerHTML = companyName;
+
+    let headL = document.getElementsByClassName('name_header').length;
+    let head = document.getElementsByClassName('name_header');
+    let positionL = document.getElementsByClassName('comp_position').length;
+    let position = document.getElementsByClassName('comp_position');
+    let idNumL = document.getElementsByClassName('id_Number').length;
+    let idNum = document.getElementsByClassName('id_Number');
+    let mottoL = document.getElementsByClassName('motto').length;
+    let motto = document.getElementsByClassName('motto');
+ 
+    if (yourName.length == 0 ) {
+        alert("Please, fill 'Your name' box");
+    } else {
+        for (let a = 0; a < headL; a++) {
+            head[a].innerHTML = yourName;
+        }
     }
 
-    let emailL = document.getElementsByClassName('email_address').length;
-    let email = document.getElementsByClassName('email_address');
-    for (let b = 0; b < emailL; b++) {
-        email[b].innerHTML = companyEmail;
+    if (companyPosition.length == 0 ) {
+        alert("Please, fill 'Position' box");
+    } else {
+        for (let b = 0; b < positionL; b++) {
+            position[b].innerHTML = companyPosition;
+        }
     }
 
-    let telL = document.getElementsByClassName('tel_num').length;
-    let tel = document.getElementsByClassName('tel_num');
-    for (let c = 0; c < telL; c++) {
-        tel[c].innerHTML = companyTel;
+    if (idNumber.length == 0 ) {
+        alert("Please, fill 'ID Number' box");
+    } else {
+        for (let c = 0; c < idNumL; c++) {
+            idNum[c].innerHTML = idNumber;
+        }
     }
 
-    let addressL = document.getElementsByClassName('comp_address').length;
-    let address = document.getElementsByClassName('comp_address');
-    for (let d = 0; d < addressL; d++) {
-        address[d].innerHTML = companyAddress;
+    if (yourMotto.length == 0 ) {
+        alert("Please, fill 'Your motto' box");
+    } else {
+        for (let d = 0; d < mottoL; d++) {
+            motto[d].innerHTML = yourMotto;
+        }
     }
 }
-
-
 /* Ta funkcja pozwala nam zmienić layout wizytówki za pomocą input radio */
 function changeLayout() {
     let radioOne = document.getElementById('opt');
@@ -46,11 +62,6 @@ function changeLayout() {
     let cardOne = document.getElementById('card');
     let cardTwo = document.getElementById('card1');
     let cardThree = document.getElementById('card2');
-
-    let cardOneLayout = window.getComputedStyle(cardOne);
-    let cardTwoLayout = window.getComputedStyle(cardTwo);
-    let cardThreeLayout = window.getComputedStyle(cardThree);
-
 
     if (radioOne.checked) {
         cardOne.style.display = 'block'
