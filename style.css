@@ -1,0 +1,326 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    background: #350869;
+}
+
+#input_container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 0 25px 25px 0;
+    background-color: #5a0075;
+    backdrop-filter: blur(5px);
+    box-shadow: 7px 0px 50px -2px #1b0436;
+}
+
+#input_container form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    text-align: center;
+}
+
+#info_h1 {
+    text-align: center;
+    font-size: 3.5rem;
+    margin-bottom: 50px;
+    font-family: 'Alata', sans-serif;
+    color: #ebb4e8;
+}
+
+form label {
+    text-align: center;
+    font-size: 1rem;
+    font-family: 'Alata', sans-serif;
+    color: #ebb4e8;
+}
+
+#input_container input.info_input {
+    height: 2.5rem;
+    width: 45%;
+    align-self: center;
+    border-radius: 25px 25px 25px 25px;
+    border: none;
+    background: #bb12ee;
+    padding: 10px;
+    transition: all .2s;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#input_container input.info_input:focus {
+    border: none;
+    outline: none;
+    transition: all .1s;
+    border: 3px solid #ebb4e8;
+    background: rgb(131, 22, 104);
+}
+
+#input_container input.info_input:active {
+    background: rgb(131, 22, 104);
+}
+
+input::placeholder {
+    color: #ebb4e8;
+    font-family: 'Alata', sans-serif;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.checkbox_container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+#checkh1, #checkh2 {
+        text-align: center;
+        font-size: 1.2rem;
+        font-family: 'Alata', sans-serif;
+        color: #ebb4e8;
+        margin-top: 30px;
+        margin-bottom: 15px;
+}
+
+.checkbox_container label, input {
+    margin-right: 10px;
+    color: #ebb4e8;
+    font-family: 'Alata', sans-serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.input_radio {
+    width: 1rem;
+    height: 1rem;
+    outline: 3px solid #ebb4e8;
+    appearance: none;
+    border: 0.2rem solid #fff;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.input_radio:hover {
+    outline-color: #bb12eea9;
+}
+
+.input_radio:checked {
+    outline-color: #ebb4e8;
+    background-color: rgb(131, 22, 104);
+
+    animation: outline-checked;
+    animation-duration: 0.1s;
+    animation-iteration-count: 4;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+}
+
+@keyframes outline-checked {
+    0% {
+        outline-offset: 0;
+    }
+
+    100% {
+        outline-offset: 0.2rem;
+    }
+}
+
+#input_container button {
+    height: 2.5rem;
+    width: 25%;
+    align-self: center;
+    border-radius: 25px 25px 25px 25px;
+    border: none;
+    background: #bb12ee;
+    padding: 10px;
+    color: #ebb4e8;
+    font-family: 'Alata', sans-serif;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: all .1s;
+}
+
+#input_container button:hover {
+    background-color: rgb(131, 22, 104);
+    cursor: pointer;
+    transition: all .1s;
+}
+
+#input_container button:active {
+    border: 3px solid #ebb4e8;
+    transition: all .05s;
+}
+
+#render_container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#render_container > #welcome_text {
+    position: absolute;
+    width: 35%;
+    top: 150px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-family: 'Alata', sans-serif;
+    color: #b665eb;
+
+}
+
+.bussiness_card {
+    width: 450px;
+    height: 300px;
+    background-image: conic-gradient(from 270deg at 10% 80%, #06081f, #001f3c, #003559, 
+                                                             #004c72, #006486, #007d90, 
+                                                             #009691, #00af89, #00c779, 
+                                                             #46dc62, #98f045, #e1ff1f);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 5px 5px 23px 5px #26064e;
+}
+
+#card {
+    display: block;
+}
+
+#card1 {
+    display: none;
+}
+
+#card2 {
+    display: none;
+}
+
+.bussiness_card h1 {
+    color: white;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.bussiness_card p {
+    color: white;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 0.95rem;
+}
+
+#card_wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+#card_wrapper h1 {
+    margin-bottom: 40px;
+    border-bottom: 0.5px solid white;
+    text-align: center;
+}
+
+#card_wrapper .input_text {
+    margin-top: 10px;
+}
+
+#card_wrapper1 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row-reverse; 
+    padding: 20px;  
+}
+
+#cheader {
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-left: 0.5px solid white;
+}
+
+#cheader h1 {
+    padding: 10px;
+    border: none;
+    text-align: right;
+}
+
+#card_wrapper1 > #contact_text {
+    text-align: center;
+}
+
+#contact_text p {
+    margin-top: 15px;
+}
+
+#card_wrapper2 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+#card_wrapper2 {
+    padding: 20px;    
+}
+
+#card_wrapper2 h1 {
+    border-bottom: 0.5px solid white;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+#card_wrapper2 .input_text {
+    margin-top: 10px;
+}
+
+#render_container > #send {
+    position: absolute;
+    width: 15%;
+    bottom: 150px;
+    height: 3rem;
+    padding: 10px;
+    align-self: center;
+    border-radius: 25px 25px 25px 25px;
+    border: none;
+    background: #6621c2;
+    color: #c395ff;
+    font-family: 'Alata', sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+#render_container > #send:hover {
+    background-color: rgb(109, 22, 131);
+    cursor: pointer;
+    transition: all .1s;
+}
+
+#render_container > #send:active {
+    border: 3px solid #ebb4e8;
+    transition: all .05s;
+}

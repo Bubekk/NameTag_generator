@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Heebo:wght@400;700&family=Montserrat&family=Noto+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+    <title>Name tag</title>
+</head>
+<body>
+    <main>
+        <div id="input_container">
+            <h1 class="description" id="info_h1">Fill your informations</h1>
+            <form action="#">
+                <label class="info_input" for="company_name">Your Name</label>
+                <input class="info_input" id="company_name" type="text" placeholder="John/ Jane Doe" autocomplete="off"> <br>
+                <label class="info_input" for="mail_address">Position: </label>
+                <input class="info_input" id="mail_address" type="text" placeholder="Manager" autocomplete="off"> <br>
+                <label class="info_input" for="address">Your motto </label>
+                <input class="info_input" id="address" type="text" placeholder="One Apple away, keeps doctor away" autocomplete="off"> <br>
+                <label class="info_input" for="tel">ID Number:  </label> 
+                <input class="info_input" id="tel" type="number" placeholder="65548" autocomplete="off"> <br>
+                <button onclick="fillFunction()">Submit!</button>
+            </form>
+            <h1 id="checkh1">Choose layout of your name tag</h1>
+            <div class="checkbox_container">
+                <label for="opt">1</label>
+                <input class="input_radio" id="opt" name="radiobox" type="radio" checked onclick="changeLayout()">
+                <label for="opt1">2</label> 
+                <input class="input_radio" id="opt1" name="radiobox" type="radio" onclick="changeLayout()">
+                <label for="opt2">3</label> 
+                <input class="input_radio" id="opt2" name="radiobox" type="radio" onclick="changeLayout()">
+            </div>
+            <h1 id="checkh2">Choose colors of your name tag</h1>
+            <div class="checkbox_container">
+                <label for="col">1</label>
+                <input class="input_radio" id="col" name="radiobox1" type="radio" checked onclick="changeColors()">
+                <label for="col1">2</label> 
+                <input class="input_radio" id="col1" name="radiobox1" type="radio" onclick="changeColors()">
+                <label for="col2">3</label> 
+                <input class="input_radio" id="col2" name="radiobox1" type="radio" onclick="changeColors()">
+            </div>
+        </div>
+        <div id="render_container">
+            <p id="welcome_text">Hi, generate your badge and become a full team member!
+                When you're ready just hit the 'SEND' button and wait for your badge. We are glad that you are working for us!</p>
+            <div class="bussiness_card" id="card">
+                <div id="card_wrapper">
+                    <h1 class="comp_header">John/ Jane Doe</h1>
+                    <p class="input_text">ID Num: <span class="tel_num">65548</span> </p>
+                    <p class="input_text">Position: <span class="email_address">Manager</span> </p>
+                    <p class="input_text">Your motto:  <span class="comp_address">One Apple away, keeps doctor away</span> </p>
+                </div>
+            </div>
+            <div class="bussiness_card" id="card1">
+                <div id="card_wrapper1">
+                    <div id="cheader"> 
+                        <h1 class="comp_header">John/ Jane Doe</h1> 
+                    </div>
+                    <div id="contact_text">
+                        <p class="input_text">ID Num: <span class="tel_num">65548</span> </p>
+                        <p class="input_text">Position: <span class="email_address">Manager</span> </p>
+                        <p class="input_text">Your motto: <br> <span class="comp_address">One Apple away, keeps doctor away</span> </p>
+                    </div>
+                </div>
+            </div>
+            <div class="bussiness_card" id="card2">
+                <div id="card_wrapper2">
+                    <h1 class="comp_header">John/ Jane Doe</h1>
+                    <p class="input_text">ID Num: <span class="tel_num">65548</span> </p>
+                    <p class="input_text">Position: <span class="email_address">Manager</span> </p>
+                    <p class="input_text">Your motto: <span class="comp_address">One Apple away, keeps doctor away</span> </p>
+                </div>
+            </div>
+            <button id="send">Send!</button>
+        </div>
+    </main>
+<script src="app.js"></script>
+</body>
+</html>
