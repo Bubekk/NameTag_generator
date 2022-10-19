@@ -61,6 +61,7 @@ form label {
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
+  appearance: none;
   margin: 0;
 }
 
@@ -323,4 +324,202 @@ input::placeholder {
 #render_container > #send:active {
     border: 3px solid #ebb4e8;
     transition: all .05s;
+}
+
+
+
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+    main {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        overflow: hidden;
+    }
+
+    #input_container {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: wrap;
+        border-radius: 0;
+    }
+
+    #info_h1 {
+        font-size: 2rem;
+        margin-bottom: 25px;
+    }
+    
+    form label {
+        font-size: .7rem;
+        margin-bottom: 5px;
+    }
+    
+    #input_container input.info_input {
+        height: 1.5rem;
+        width: 75%;
+        align-self: center;
+        padding: 5px;
+    }
+
+    #checkh1, #checkh2 {
+        width: 50%;
+        text-align: center;
+        font-size: .9rem;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .checkbox_container {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+    }
+
+    #render_container {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .bussiness_card {
+        width: 350px;
+        height: 250px;
+        order: 1;
+    }
+
+    .bussiness_card h1 {
+        font-size: .95rem;
+    }
+    
+    .bussiness_card p {
+        font-size: .5rem;
+    }
+
+    #render_container > #send {
+        position: relative;
+        width: 15%;
+        top: 100px;
+        right: 130px;
+        align-self: center;
+        order: 3;
+    }
+
+    #render_container > #welcome_text {
+        position: relative;
+        width: 35%;
+        height: 50%;
+        top: -60px;
+        left: 80px;
+        text-align: center;
+        font-size: 1.2rem;
+        order: 2;
+        display: block;
+    }    
+}
+
+
+@media screen and (max-width: 766px) {
+    main {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        overflow: hidden;
+    }
+
+    #input_container {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: wrap;
+        border-radius: 0;
+    }
+
+    #info_h1 {
+        font-size: 2rem;
+        margin-bottom: 25px;
+    }
+    
+    form label {
+        font-size: .7rem;
+        margin-bottom: 5px;
+    }
+    
+    #input_container input.info_input {
+        height: 1.5rem;
+        width: 75%;
+        align-self: center;
+        padding: 5px;
+    }
+
+    #checkh1, #checkh2 {
+        width: 50%;
+        text-align: center;
+        font-size: .9rem;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .checkbox_container {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+    }
+
+    #render_container {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .bussiness_card {
+        margin-top: 50px;
+        width: 350px;
+        height: 250px;
+        order: 1;
+    }
+
+    .bussiness_card h1 {
+        font-size: .95rem;
+    }
+    
+    .bussiness_card p {
+        font-size: .5rem;
+    }
+
+    #render_container > #send {
+        position: relative;
+        width: 15%;
+        top: 100px;
+        right: 100px;
+        align-self: center;
+        order: 3;
+    }
+
+    #render_container > #welcome_text {
+        position: relative;
+        width: 35%;
+        height: 50%;
+        top: -60px;
+        left: 80px;
+        text-align: center;
+        font-size: 1.2rem;
+        order: 2;
+        display: block;
+    }      
 }
